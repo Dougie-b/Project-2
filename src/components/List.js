@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const List = () => {
 
-  // const [dataItems, setDataItems] = useState([])
+  const [dataItems, setDataItems] = useState([])
   const [questions, setQuestions] = useState([])
   const [catogories, setCatogories] = useState([])
   const [filQuestions, setFilQuestions] = useState([])
@@ -12,7 +12,7 @@ const List = () => {
     const getQuestions = async () => {
       try {
         const { data } = await axios.get('https://api.trivia.willfry.co.uk/questions?&limit=50')
-        setQuestions(data)
+        setDataItems(data)
       } catch (error) {
         console.log(error)
       }
@@ -39,6 +39,10 @@ const List = () => {
   // useEffect was an attempt at filtereing duplicate questions from the API
   // Wait for original state to have loaded before running a forEach loop and checking whther an occurance of the same
   // question was already in an array to then push it and save that array to a new state 
+
+  useEffect(() => {
+    setQuestions(dataItems)
+  }, [dataItems])
 
   function getCatogories() {
     let arr = []
@@ -74,7 +78,7 @@ const List = () => {
     } else if (value > 29) {
       const arr4 = questions.slice(0, 30)
       setQuestions(arr4)
-    } else {
+    } else if (value === '') {
       setQuestions(dataItems)
     }
   }
