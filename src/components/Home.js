@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react"
-import axios from "axios"
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
 const Home = () => {
 
@@ -9,7 +9,7 @@ const Home = () => {
 
   const getRandom = async () => {
     try {
-      const { data } = await axios.get('https://api.trivia.willfry.co.uk/questions?&limit=1')
+      const { data } = await axios.get('https://the-trivia-api.com/questions?limit=1')
       setRandom(data)
     } catch (error) {
       console.log(error)
@@ -25,7 +25,7 @@ const Home = () => {
       getRandom()
       seconds = 15
       setTimerDisplay('')
-    }, 15000);
+    }, 15000)
   }, [])
   // Waits for first render and runs getRandom & createTimer
   // Also runs a setInterval for every 15 seconds that clears the state and pulls a new question
@@ -49,7 +49,7 @@ const Home = () => {
   // This toggles the display of the hidden answer 
 
   return (
-    <>
+    <div>
       <h3 className='home-header'>Test Your Knowledge!</h3>
       <div className='home-display'>
         {random.map((ran) => {
@@ -64,7 +64,7 @@ const Home = () => {
         })}
       </div>
       <div className='timer-display' id={timerDisplay}>{timerDisplay}</div>
-    </>
+    </div>
   )
 }
 

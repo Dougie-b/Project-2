@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Home from "./components/Home"
-import Nav from "./components/Nav"
-import List from "./components/List"
-import Footer from "./components/Footer"
+import Home from './components/Home'
+import Nav from './components/Nav'
+import List from './components/List'
+import Footer from './components/Footer'
 
 function App() {
   return (

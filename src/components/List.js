@@ -11,7 +11,7 @@ const List = () => {
   useEffect(() => {
     const getQuestions = async () => {
       try {
-        const { data } = await axios.get('https://api.trivia.willfry.co.uk/questions?&limit=50')
+        const { data } = await axios.get('https://the-trivia-api.com/questions?limit=50')
         setDataItems(data)
       } catch (error) {
         console.log(error)
@@ -45,7 +45,7 @@ const List = () => {
   }, [dataItems])
 
   function getCatogories() {
-    let arr = []
+    const arr = []
     questions.forEach(q => {
       if (!arr.includes(q.category)) {
         arr.push(q.category)
