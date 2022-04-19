@@ -1,7 +1,7 @@
 
 # Quizzifi
 
-In one week, as a pair, we created a quiz making app that would pull sets of questions and answers from a third party API.
+In two days, as a pair, we created a quiz making app that would pull sets of questions and answers from a third party API.
 
 ## Deployment
 
