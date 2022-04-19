@@ -57,7 +57,7 @@ We used a function to change how many questions were displayed depending on the 
 
 ## Challenges
 
-The Will Fry API was a little awkward to use and he changed his routes halfway through the project which didn't help!
+The Will Fry API was a little awkward to use as he changed the routes for the API halfway through the project which didn't help!
 
 We had a fair bit of difficulty initially with trying to remove duplicate questions from the API in the larger volume requests.
 
